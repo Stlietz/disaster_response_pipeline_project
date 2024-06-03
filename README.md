@@ -1,14 +1,25 @@
 # Disaster Response Pipeline Project
 
 ### Project Summary:
-xxxx
+The project is part of the Data Science Nanodegree offered by Udacity in collaboration with Figure8.
+
+Following a desaster, there are millions of communications via social media or directly. When a disaster occurs, disaster response organizations have the least capacity to filter for relevant messages. 
+
+Machine Learning solutions can help categorizing the messages correctly and distribute them to the responsible organization, to quickly react where it is indeed needed.
+
 ### Files:
+
 #### Folder "data":
+- Contains the data in form of csv-files, "messages" provided by figure8 sent during natural desasters, either via social media or directly to disaster response organizations
+- "process_data.py", the ETL pipeline which extracts the data, cleans and transforms it, and finally loads it into a SQLight database
+- SQLight database "DisasterResponse.db" 
 
 #### Folder "models":
+- "train_classifier.py": the ML pipeline, which loads the data from the database and trains a multi-output supervised learning model (Multinomial Naive Bayes classifier )
+- "classifier.pkl": pickle file, where the trained model is stored
 
 #### Folder "app":
-
+Contains the web app which extracts data from the database and uses the ML model to classify new messages for each of the categories
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
@@ -22,3 +33,10 @@ xxxx
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+
+### Acknowledgements:
+
+**Udacity** for setting up this awesome project in their [Data Scientist Nanodegree](https://www.udacity.com/course/data-scientist-nanodegree--nd025?promo=year_end&coupon=SKILLS50&utm_source=gsem_brand&utm_medium=ads_r&utm_campaign=19167921312_c_individuals&utm_term=143524475679&utm_keyword=data%20scientist%20udacity_e&utm_source=gsem_brand&utm_medium=ads_r&utm_campaign=19167921312_c_individuals&utm_term=143524475679&utm_keyword=data%20scientist%20udacity_e&gad_source=1&gclid=EAIaIQobChMIlNyctJC_hgMVJ6loCR3eowY6EAAYASAAEgJhzPD_BwE).
+
+**Figure8** for providing the data and context.
