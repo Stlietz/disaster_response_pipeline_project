@@ -25,7 +25,7 @@ Machine Learning solutions can help categorizing the messages correctly and dist
 
 - ./app/templates/go.html and ./app/templates/master.html: html templates for the web app
 
-- Contains the web app which extracts data from the database and uses the ML model to classify new messages for each of the categories
+
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
