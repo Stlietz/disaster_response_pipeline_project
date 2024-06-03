@@ -9,17 +9,23 @@ Machine Learning solutions can help categorizing the messages correctly and dist
 
 ### Files:
 
-#### Folder "data":
-- Contains the data in form of csv-files, "messages" provided by figure8 sent during natural desasters, either via social media or directly to disaster response organizations
-- "process_data.py", the ETL pipeline which extracts the data, cleans and transforms it, and finally loads it into a SQLight database
-- SQLight database "DisasterResponse.db" 
+- ./data/disaster_messages.csv: contains messages provided by figure8 sent during natural desasters, either via social media or directly to disaster response organizations
 
-#### Folder "models":
-- "train_classifier.py": the ML pipeline, which loads the data from the database and trains a multi-output supervised learning model (Multinomial Naive Bayes classifier )
-- "classifier.pkl": pickle file, where the trained model is stored
+- ./data/disaster_categories.csv: comprises the relevant categories of each message in the former file (csv files can be joined on "id" column)
 
-#### Folder "app":
-Contains the web app which extracts data from the database and uses the ML model to classify new messages for each of the categories
+- ./data/process_data.py: the ETL pipeline which extracts the data, cleans and transforms it, and finally loads it into a SQLight database
+
+- ./data/DisasterResponse.db: SQLight database, where the merged, cleaned and transformed data is stored/loaded
+
+- ./models/train_classifier.py: the ML pipeline, which loads the data from the database and trains a multi-output supervised learning model (Multinomial Naive Bayes classifier )
+
+- ./models/classifier.pkl: pickle file, where the trained model is stored
+
+- ./app/run.py: launches the web app to classify messages
+
+- ./app/templates/go.html and ./app/templates/master.html: html templates for the web app
+
+- Contains the web app which extracts data from the database and uses the ML model to classify new messages for each of the categories
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
